@@ -1,0 +1,22 @@
+{
+    "DtTmTkoff": 1540914887,
+    "DtTmLdg": 1540914901,
+    "DFSevent": {
+        "1": {
+            "Frq": 5250,
+            "DtTmDFS": 1540914897,
+            "Chn": 60,
+            "SiSt": 20
+        },
+        "0": {
+            "Frq": 5270,
+            "DtTmDFS": 1540914893,
+            "Chn": 52,
+            "SiSt": 0
+        }
+    },
+    "ArrAirp": "FFF",
+    "IATA_number": "AA111",
+    "DepAirp": "DDD",
+    "Device_ID": 355257093650239
+}

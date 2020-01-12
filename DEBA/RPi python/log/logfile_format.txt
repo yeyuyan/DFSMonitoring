@@ -1,0 +1,44 @@
+Data format for the DMA-DEBA interface
+From DMA to DEBA : a string will be sent in json form which will always begin with "type".
+So that the DEBA can know which event happens by the value of "type" and do the corresponding actions
+
+Format explaination:
+
+"type" : type of the event. 0 for flight data, 1 for a take-off event, 2 for a landing event
+
+"DepAirp" : IATA airport code for the departure airport. a three-letter code designating airports around the world defined by IATA. 
+
+"ArrAirp" : IATA airport code for the arrival airport.
+
+"IATA_number" : a flght number consisting of two-character airline designator and a 1 to 4 digit number.
+
+"Device_ID" : a 15-digit IMEI number unique to identify mobile phones.May be "null" if user dosen't give the permission.(IMEI:International Mobile Equipment Identity)
+
+"DtTmkoff" : UTC time in seconds for the take-off event 
+
+"DtTmLdg" : UTC time in seconds for the landing event 
+
+How to get them:
+
+Flight data including flight number, airport of departure and arrival will be entered by users.
+Device id will be get by the android app by asking for the permission
+Time of take-off and landing will be get by pressing the take-off and landing button on the user interface by users.
+
+Exemples:
+{
+"type" : 0,
+"DepAirp" : "CDG",
+"ArrAirp" : "RUS",
+"IATA_number" : RU221,
+"Device_ID" : 3552570936xxxx9
+}
+
+{
+"type" : 1, 
+"DtTmTkoff" : 15390776782
+}
+
+{
+"type" : 2,
+"DtTmLdg" : 15392776896
+}

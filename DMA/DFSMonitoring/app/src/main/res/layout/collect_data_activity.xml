@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="25dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/ConsLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5">
+
+            <Button
+                android:id="@+id/btStartM"
+                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/border_line"
+                android:onClick="monitoringClick"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@drawable/shape_line"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/ConsLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_weight="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ConsLayout1"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/Airline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/Airline"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/AskDataText" />
+
+            <TextView
+                android:id="@+id/FlightNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/FlightNum"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Airline" />
+
+            <TextView
+                android:id="@+id/Departure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/Departure"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/FlightNum" />
+
+            <TextView
+                android:id="@+id/Destination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/Destination"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Departure" />
+
+            <EditText
+                android:id="@+id/FlightNumText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/FlightNumText"
+                android:inputType="textCapCharacters"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/FlightNum"
+                app:layout_constraintLeft_toRightOf="@+id/FlightNum"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <EditText
+                android:id="@+id/DepartureText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/DepartureText"
+                android:inputType="textCapCharacters"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/Departure"
+                app:layout_constraintLeft_toLeftOf="@+id/FlightNumText"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <EditText
+                android:id="@+id/DestinationText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/DestinationText"
+                android:inputType="textCapCharacters"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/Destination"
+                app:layout_constraintLeft_toLeftOf="@+id/FlightNumText"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <EditText
+                android:id="@+id/AirlineText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/AirlineText"
+                android:inputType="textCapCharacters"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/Airline"
+                app:layout_constraintLeft_toLeftOf="@+id/FlightNumText"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/AskDataText"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="57dp"
+                android:text="@string/AskData"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/ConsLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5">
+
+            <Button
+                android:id="@+id/btCheck"
+                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:background="@drawable/border_line"
+                android:text="@string/btCheck"
+                android:textAllCaps="false"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btSendData"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/btSendData"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="45dp" />
+
+            <Button
+                android:id="@+id/btSendData"
+                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                android:layout_width="131dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/border_line"
+                android:onClick="onClick"
+                android:text="@string/SendData"
+                android:textAllCaps="false"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="45dp" />
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">DFS Monitoring</string>
+    <string name="explication">"Once the button turns to be green, you can start monitoring.
+        Before that please wait for the Bluetooth Connection."</string>
+
+    <string name="startService">Start! </string>
+
+    <string name= "info">Information of Bluetooth </string>
+    <string name= "openStatus">Bluetooth : </string>
+    <string name= "targetDevice">Target device : </string>
+    <string name= "connectionStatus">Connection : </string>
+    <string name= "btOpen">Open Bluetooth </string>
+    <string name= "btOpened">Opened </string>
+    <string name= "btClosed">Closed </string>
+    <string name= "btConnected">Connected </string>
+    <string name= "btNotConnected">Not connected </string>
+    <string name= "btContinue">Monitoring -></string>
+    <string name= "btSearch">Search and connect </string>
+
+
+    <string name="FlightNum">Flight Number : </string>
+    <string name="FlightNumText">Please enter your flight number. </string>
+    <string name="Departure">Departure : </string>
+    <string name="DepartureText">Please enter your flight departure. </string>
+    <string name="Destination">Destination : </string>
+    <string name="DestinationText">Please enter your flight destination. </string>
+    <string name="Airline">Airline : </string>
+    <string name="AirlineText">Please enter the airline of the flight.</string>
+    <string name="StartM">Take-off event</string>
+    <string name="EndM">Landing event</string>
+    <string name="Landed">Landed</string>
+    <string name="SendData">Send flight data -></string>
+    <string name="AskData">Please help us with the flight data.You can enter the information during all the flight.
+        \nThank you for your cooperation!</string>
+    <string name="Success">Success!</string>
+    <string name="connectedToDevice">Already connected to the device.</string>
+    <string name="btCheck">Check Data form</string>
+
+    <string name="dialogConnecting">Connecting…</string>
+    <string name="sending">Sending...</string>
+
+</resources>

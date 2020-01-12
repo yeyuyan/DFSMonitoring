@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.yye.dfsmonitoring">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:sharedUserId="android.uid.system">
+
+        <service
+            android:name=".DaemonService"
+            android:exported="true"
+            android:permission=".DaemonService">
+            <intent-filter>
+                <action android:name=".DaemonService"/>
+            </intent-filter>
+        </service>
+
+
+        <activity android:name=".StartActivity"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name = "android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".CollectDataActivity"
+            android:launchMode="singleInstance">
+        </activity>
+
+        <receiver
+            android:name="com.example.yye.dfsmonitoring.BootRestartReceiver">
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+
+        <receiver android:name="com.example.yye.dfsmonitoring.PhoneBatteryManager$BatteryReceiver">
+            <intent-filter>
+                <action android:name="com.exeample.yye.dfsmonitoring.PhoneBatteryManager.BatteryReceiver" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+
+            </intent-filter>
+
+        </receiver>
+
+
+
+    </application>
+
+
+</manifest>
